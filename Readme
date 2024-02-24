@@ -1,0 +1,66 @@
+<<<<<<<<<Train command>>>>>>>>>>>>>>>>>> 
+
+..............Train robot with GPU---> at leat 4gb......................
+python main.py --is_sim --obj_mesh_dir objects/blocks --grasp_rewards --experience_replay  --save_visualizations
+
+..............Train robot with CPU....................................
+python main.py --is_sim --obj_mesh_dir objects/blocks --grasp_rewards --experience_replay  --save_visualizations --cpu
+
+<<<<<<<<<<<<Test Scenario>>>>>>>>>>>>>>>>>>>
+
+........................Ist: Sparsely Scenario............... 
+python main.py --is_sim --obj_mesh_dir 'objects/blocks' --num_obj 10 --grasp_rewards --experience_replay  --is_testing --test_preset_cases --test_preset_file 'simulation/test-cases/SCS-1' --load_snapshot --snapshot_file 'logs/train/models/snapshot-backup.reinforcement.pth'  --save_visualizations 
+
+python main.py --is_sim --obj_mesh_dir 'objects/blocks' --num_obj 10 --grasp_rewards --experience_replay  --is_testing --test_preset_cases --test_preset_file 'simulation/test-cases/SCS-2' --load_snapshot --snapshot_file 'logs/train/models/snapshot-backup.reinforcement.pth'  --save_visualizations
+
+python main.py --is_sim --obj_mesh_dir 'objects/blocks' --num_obj 10 --grasp_rewards --experience_replay  --is_testing --test_preset_cases --test_preset_file 'simulation/test-cases/SCS-3' --load_snapshot --snapshot_file 'logs/train/models/snapshot-backup.reinforcement.pth'  --save_visualizations
+
+
+...........................2nd: Meduim Scenario............................
+
+python main.py --is_sim --obj_mesh_dir 'objects/blocks' --num_obj 20 --grasp_rewards --experience_replay  --is_testing --test_preset_cases --test_preset_file 'simulation/test-cases/MCS-1' --load_snapshot --snapshot_file 'logs/train/models/snapshot-backup.reinforcement.pth'  --save_visualizations 
+
+python main.py --is_sim --obj_mesh_dir 'objects/blocks' --num_obj 20 --grasp_rewards --experience_replay  --is_testing --test_preset_cases --test_preset_file 'simulation/test-cases/MCS-2' --load_snapshot --snapshot_file 'logs/train/models/snapshot-backup.reinforcement.pth'  --save_visualizations 
+
+python main.py --is_sim --obj_mesh_dir 'objects/blocks' --num_obj 20 --grasp_rewards --experience_replay  --is_testing --test_preset_cases --test_preset_file 'simulation/test-cases/MCS-3' --load_snapshot --snapshot_file 'logs/train/models/snapshot-backup.reinforcement.pth'  --save_visualizations 
+
+
+...........................3rd: Densely Scenario............................
+
+
+python main.py --is_sim --obj_mesh_dir 'objects/blocks' --num_obj 20 --grasp_rewards --experience_replay  --is_testing --test_preset_cases --test_preset_file 'simulation/test-cases/DCS-1' --load_snapshot --snapshot_file 'logs/train/models/snapshot-backup.reinforcement.pth'  --save_visualizations 
+
+python main.py --is_sim --obj_mesh_dir 'objects/blocks' --num_obj 30 --grasp_rewards --experience_replay  --is_testing --test_preset_cases --test_preset_file 'simulation/test-cases/DCS-2' --load_snapshot --snapshot_file 'logs/train/models/snapshot-backup.reinforcement.pth'  --save_visualizations 
+
+python main.py --is_sim --obj_mesh_dir 'objects/blocks' --num_obj 40 --grasp_rewards --experience_replay  --is_testing --test_preset_cases --test_preset_file 'simulation/test-cases/DCS-3' --load_snapshot --snapshot_file 'logs/train/models/snapshot-backup.reinforcement.pth'  --save_visualizations 
+
+
+
+
+
+<<<<<<<<<<<<<<<<<<<Evaluation>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.................Ist: Sparsely Scenario.................
+
+python evaluate.py --session_directory 'logs/SCS-1' --method 'reinforcement' --num_obj_complete 10
+python evaluate.py --session_directory 'logs/SCS-2' --method 'reinforcement' --num_obj_complete 7
+python evaluate.py --session_directory 'logs/SCS-2' --method 'reinforcement' --num_obj_complete 8
+
+...............2nd: Sparsely Scenario..................
+
+python evaluate.py --session_directory 'logs/MCS-1' --method 'reinforcement' --num_obj_complete 13
+python evaluate.py --session_directory 'logs/MCS-2' --method 'reinforcement' --num_obj_complete 14
+python evaluate.py --session_directory 'logs/MCS-3' --method 'reinforcement' --num_obj_complete 17
+
+..................3rd: Densely Scenario.....................
+
+python evaluate.py --session_directory 'logs/DCS-1' --method 'reinforcement' --num_obj_complete 20
+python evaluate.py --session_directory 'logs/DCS-2' --method 'reinforcement' --num_obj_complete 30
+python evaluate.py --session_directory 'logs/DCS-3' --method 'reinforcement' --num_obj_complete 40
+
+<<<<<<<<<<<<<<<<<Plot>>>>>>>>>>>>>>>>>>>
+
+python plot.py  'logs/train' 
+python evaluate.py --session_directory 'logs/train' --method 'reinforcement' --num_obj_complete 10
+
+
