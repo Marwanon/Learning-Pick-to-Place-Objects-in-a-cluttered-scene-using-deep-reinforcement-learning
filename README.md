@@ -46,8 +46,8 @@ Firstly, the camera captures the RGB-D images, which then projected to generate 
 
 # Demonstration Videos
 
-![Video 1](vidoes-of-project/case1-S3.mp4)
-![Video 2](vidoes-of-project/case2-S3.mp4)
+![Video 1](vidoes-of-project/Video.mp4)
+
 
 # Train command
 
