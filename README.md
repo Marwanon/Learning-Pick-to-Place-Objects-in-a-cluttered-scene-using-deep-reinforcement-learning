@@ -1,0 +1,2 @@
+# Learning-Pick-to-Place-Objects-in-a-cluttered-scene-using-deep-reinforcement-learning
+roposes an efficient grasp-to-place strategy for robotic manipulation in sparse environments using a deep Q-network. Requires less computation and time, generalizes well across scenarios, and achieves optimal grasp points via trial-and-error learning. Demonstrated effectiveness with a UR5 robotic arm and Parallel-jaw gripper.
