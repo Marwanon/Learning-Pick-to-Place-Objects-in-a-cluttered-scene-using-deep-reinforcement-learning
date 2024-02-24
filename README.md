@@ -45,7 +45,7 @@ The proposed approach is intended to minimize the demands of the computing proce
 Firstly, the camera captures the RGB-D images, which then projected to generate the color () and depth () heightmaps. The  and  will be rotated () before being forwarded into the conventional layers (a 2-layer residual networks [35]). The residual networks will reduce the input parameters of DenseNet-121 to be 1024 instead 2048, which can effectively minimize the time-consuming, and run on moderate CPU and GPU.  Then, the extracted features are then fed to a DenseNet-121 [36], a pre-trained model on ImageNet [37], to create motion agnostic features. Then, the motion agnostic features are used as inputs by the grasp net  followed by bilinear upsampling, which estimates the grasp Q-maps  . A three-layer residual network is used in the .  Finally, the robot executes the predicted best grasp, corresponding to the highest Q-value. Rewards are then assigned automatically depending on the success of grasps. The experience replay [38] is employed, which used to store the agent's experiences at each time step in a data set  that is pooled across many episodes to create a replay memory. Then, like with DQN, we randomly sample the memory for a minibatch of experience and utilize this to train off-policy.
 
 # Domonstration Vidoes
-Some Tests Scenarios [case1-S3.mp4]
+![Some Tests Scenarios](case1-S3.avi) (case2-S3.avi)
 
 # Train command
 
