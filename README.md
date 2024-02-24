@@ -46,8 +46,8 @@ Firstly, the camera captures the RGB-D images, which then projected to generate 
 
 # Demonstration Videos
 
-[![Video 1](https://github.com/Marwanon/Learning-Pick-to-Place-Objects-in-a-cluttered-scene-using-deep-reinforcement-learning/tree/main/vidoes-of-project/case1-S3.avi)
-[![Video 2](https://github.com/Marwanon/Learning-Pick-to-Place-Objects-in-a-cluttered-scene-using-deep-reinforcement-learning/tree/main/vidoes-of-project/case2-S3.mp4)
+[![Video 1](vidoes-of-project/case1-S3.mp4)
+[![Video 2](vidoes-of-project/case2-S3.mp4)
 
 # Train command
 
